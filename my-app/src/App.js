@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import Welcome from './welcome';
+import Welcome from './welcome.jsx';
+import Student from './Student.js';
 
 function App() {
   return (
     <div className="App">
+      <Student name="Harini" classText="React" grade="A" />
       <header className="App-header">
         <Welcome />
         <img src={logo} className="App-logo" alt="logo" />
