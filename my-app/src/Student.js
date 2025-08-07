@@ -1,11 +1,12 @@
 import React from 'react';
 
-function Student({name, classText, grade}) {
+function Student({name, classText, grade, counter}) {
     return (
         <>
         <p>Name: {name}</p>
         <p>Class: {classText}</p>
         <p>Grade: {grade}</p>
+        <p>counter: {counter}</p>
         </>
     )
 }
