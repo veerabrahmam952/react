@@ -10,6 +10,8 @@ function Student({name, classText, grade}) {
     )
 }
 
+//Props Example
+
 // function Student(props) {
 //     return (
 //         <>
