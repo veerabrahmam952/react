@@ -5,6 +5,7 @@ import Student from './Student.js';
 import Counter from './Counter.js';
 import { UserStatus, UserStatusTernary, UserStatusLogicalAnd } from './UserStatus.js';
 import Products from './Products.js';
+import {UserForm, SingleForm} from './components/UserForm.js';
 
 function App() {
   const products = [
@@ -35,7 +36,8 @@ function App() {
       {/* <UserStatus isLoggedIn={false}/> */}
       {/* <UserStatusTernary isLoggedIn={false}/> */}
       {/* <UserStatusLogicalAnd isLoggedIn={true}/> */}
-      {products.length > 0 ? <Products products={products}/>: <p>No products available</p>}
+      {/* {products.length > 0 ? <Products products={products}/>: <p>No products available</p>} */}
+      <SingleForm />
     </div>
   );
 }
