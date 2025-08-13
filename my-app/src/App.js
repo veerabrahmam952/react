@@ -6,6 +6,7 @@ import Counter from './Counter.js';
 import { UserStatus, UserStatusTernary, UserStatusLogicalAnd } from './UserStatus.js';
 import Products from './Products.js';
 import {UserForm, SingleForm} from './components/UserForm.js';
+import {Effect, PostFetcher} from './components/Effect.js';
 
 function App() {
   const products = [
@@ -37,7 +38,9 @@ function App() {
       {/* <UserStatusTernary isLoggedIn={false}/> */}
       {/* <UserStatusLogicalAnd isLoggedIn={true}/> */}
       {/* {products.length > 0 ? <Products products={products}/>: <p>No products available</p>} */}
-      <SingleForm />
+      {/* <SingleForm /> */}
+      {/* <Effect /> */}
+      <PostFetcher />
     </div>
   );
 }
