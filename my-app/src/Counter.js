@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import Student from "./Student";
+import { useParams } from "react-router-dom";
 
 function Counter() {
+    const param = useParams();
+    console.log(param);
     const [counter, setCounter] = useState(0);
     const [text, setText] = useState('');
 
@@ -24,6 +27,7 @@ function Counter() {
     return(
         <>
         <label htmlFor="live-input">Type</label>
+        <p>Counter ID: {param.id}</p>
         <input
         type="text"
         id="unique"

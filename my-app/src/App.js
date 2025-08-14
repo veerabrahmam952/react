@@ -1,12 +1,16 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
-import Welcome from './welcome.jsx';
+// import Welcome from './welcome.jsx';
 import Student from './Student.js';
 import Counter from './Counter.js';
-import { UserStatus, UserStatusTernary, UserStatusLogicalAnd } from './UserStatus.js';
-import Products from './Products.js';
-import {UserForm, SingleForm} from './components/UserForm.js';
-import {Effect, PostFetcher} from './components/Effect.js';
+// import { UserStatus, UserStatusTernary, UserStatusLogicalAnd } from './UserStatus.js';
+// import Products from './Products.js';
+// import {UserForm, SingleForm} from './components/UserForm.js';
+// import {Effect, PostFetcher} from './components/Effect.js';
+import WelcomeNew from './components/Welcome.js';
+import MainLayout from './components/MainLayout.js';
+import { Router, Routes, Route } from 'react-router-dom';
+import { SingleForm } from './components/UserForm.js';
 
 function App() {
   const products = [
@@ -16,32 +20,19 @@ function App() {
     {name: 'HP', price: 70000, description: 'Laptop', id: 4},
   ]
   return (
-    <div className="App">
-      {/* <Counter /> */}
-      {/* <Student name="Harini" classText="React" grade="A" counter="0"/> */}
-      {/* <header className="App-header">
-        <Welcome />
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      {/* <UserStatus isLoggedIn={false}/> */}
-      {/* <UserStatusTernary isLoggedIn={false}/> */}
-      {/* <UserStatusLogicalAnd isLoggedIn={true}/> */}
-      {/* {products.length > 0 ? <Products products={products}/>: <p>No products available</p>} */}
-      {/* <SingleForm /> */}
-      {/* <Effect /> */}
-      <PostFetcher />
-    </div>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+         {<Route index element={<WelcomeNew />} />}
+         {<Route path="/member/*" element={<Student name="Harini" classText="React" grade="A" counter="0"/>} />}
+         {<Route path="/form/*" element={<SingleForm/>} />}
+        </Route>
+      </Routes>
+    // <Routes>
+    //   <Route path="/" element={<WelcomeNew />} />
+    //   <Route path="/member" element={<Student name="Harini" classText="React" grade="A" counter="0"/>} />
+    //   <Route path="/counter" element={<Counter />} />
+    // </Routes>
+   
   );
 }
 

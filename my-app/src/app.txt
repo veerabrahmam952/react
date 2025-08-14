@@ -1,0 +1,26 @@
+ // <div className="App">
+      {/* <Counter /> */}
+      {/* <Student name="Harini" classText="React" grade="A" counter="0"/> */}
+      {/* <header className="App-header">
+        <Welcome />
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header> */}
+      {/* <UserStatus isLoggedIn={false}/> */}
+      {/* <UserStatusTernary isLoggedIn={false}/> */}
+      {/* <UserStatusLogicalAnd isLoggedIn={true}/> */}
+      {/* {products.length > 0 ? <Products products={products}/>: <p>No products available</p>} */}
+      {/* <SingleForm /> */}
+      {/* <Effect /> */}
+      <PostFetcher />
+    // </div>

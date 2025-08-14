@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function UserForm() {
     const [name, setName] = React.useState('');
@@ -29,6 +30,7 @@ function UserForm() {
 }
 
 function SingleForm() {
+    const navigate = useNavigate();
     const [form, setForm] = React.useState({
         name: '',
         selectedOption: '',
@@ -43,6 +45,7 @@ function SingleForm() {
         if(validateForm()) {
             alert("Form submitted successfully!");
             console.log("Form Data:", form);
+            navigate('/member/counter');
         } else {
             alert("Please fix the errors in the form.");
         }
