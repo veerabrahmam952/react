@@ -11,6 +11,9 @@ import WelcomeNew from './components/Welcome.js';
 import MainLayout from './components/MainLayout.js';
 import { Router, Routes, Route } from 'react-router-dom';
 import { SingleForm } from './components/UserForm.js';
+import ThemeProvider from './components/ThemeProvider.js';
+import ThemedComponent from './components/ThemedComponent.js';
+import UserComponent from './components/UserComponent.js';
 
 function App() {
   const products = [
@@ -20,13 +23,17 @@ function App() {
     {name: 'HP', price: 70000, description: 'Laptop', id: 4},
   ]
   return (
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-         {<Route index element={<WelcomeNew />} />}
-         {<Route path="/member/*" element={<Student name="Harini" classText="React" grade="A" counter="0"/>} />}
-         {<Route path="/form/*" element={<SingleForm/>} />}
-        </Route>
-      </Routes>
+    <ThemeProvider>
+       <ThemedComponent />
+       <UserComponent />
+    </ThemeProvider>
+      // <Routes>
+      //   <Route path="/" element={<MainLayout />}>
+      //    {<Route path='/welcome' element={<WelcomeNew />} />}
+      //    {<Route path="/student/*" element={<Student name="Harini" classText="React" grade="A" counter="0"/>} />}
+      //    {<Route path="/form/*" element={<SingleForm/>} />}
+      //   </Route>
+      // </Routes>
     // <Routes>
     //   <Route path="/" element={<WelcomeNew />} />
     //   <Route path="/member" element={<Student name="Harini" classText="React" grade="A" counter="0"/>} />
