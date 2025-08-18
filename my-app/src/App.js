@@ -14,6 +14,9 @@ import { SingleForm } from './components/UserForm.js';
 import ThemeProvider from './components/ThemeProvider.js';
 import ThemedComponent from './components/ThemedComponent.js';
 import UserComponent from './components/UserComponent.js';
+// import {StylingComponent, InlineStylingComponent} from './components/StylingComponent.js';
+// import StylingModuleComponent  from './components/StyleComponents/StylingModule.js';
+import StyleTaggedComponent from './components/StyleComponents/StyleTaggedComponent.js';
 
 function App() {
   const products = [
@@ -23,10 +26,18 @@ function App() {
     {name: 'HP', price: 70000, description: 'Laptop', id: 4},
   ]
   return (
-    <ThemeProvider>
-       <ThemedComponent />
-       <UserComponent />
-    </ThemeProvider>
+    <>
+    {/* <div className="container">Hi</div> */}
+    {/* <StylingComponent />
+    <InlineStylingComponent /> */}
+    {/* <StylingModuleComponent /> */}
+    <StyleTaggedComponent />
+    </>
+    
+    // <ThemeProvider>
+    //    <ThemedComponent />
+    //    <UserComponent />
+    // </ThemeProvider>
       // <Routes>
       //   <Route path="/" element={<MainLayout />}>
       //    {<Route path='/welcome' element={<WelcomeNew />} />}
