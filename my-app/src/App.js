@@ -11,6 +11,7 @@ import WelcomeNew from './components/Welcome.js';
 import MainLayout from './components/MainLayout.js';
 import { Router, Routes, Route } from 'react-router-dom';
 import { SingleForm } from './components/UserForm.js';
+import {UserForm, HtmlForm} from './components/FormValidations/UserForm.js';
 // import ThemeProvider from './components/ThemeProvider.js';
 // import ThemedComponent from './components/ThemedComponent.js';
 // import UserComponent from './components/UserComponent.js';
@@ -18,7 +19,7 @@ import { SingleForm } from './components/UserForm.js';
 // import StylingModuleComponent  from './components/StyleComponents/StylingModule.js';
 // import StyleTaggedComponent from './components/StyleComponents/StyleTaggedComponent.js';
 // import InputFocusWithButton from './components/UseRef/InputFocusWithButton.js';
-import RefCounter from './components/UseRef/RefCounter.js';
+// import RefCounter from './components/UseRef/RefCounter.js';
 
 function App() {
   const products = [
@@ -35,7 +36,9 @@ function App() {
     {/* <StylingModuleComponent /> */}
     {/* <StyleTaggedComponent /> */}
     {/* <InputFocusWithButton /> */}
-    <RefCounter />
+    {/* <RefCounter /> */}
+    {/* <UserForm /> */}
+    <HtmlForm />
     </>
     
     // <ThemeProvider>
