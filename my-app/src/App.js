@@ -1,17 +1,17 @@
 // import logo from './logo.svg';
 import './App.css';
 // import Welcome from './welcome.jsx';
-import Student from './Student.js';
-import Counter from './Counter.js';
+// import Student from './Student.js';
+// import Counter from './Counter.js';
 // import { UserStatus, UserStatusTernary, UserStatusLogicalAnd } from './UserStatus.js';
 // import Products from './Products.js';
 // import {UserForm, SingleForm} from './components/UserForm.js';
 // import {Effect, PostFetcher} from './components/Effect.js';
-import WelcomeNew from './components/Welcome.js';
-import MainLayout from './components/MainLayout.js';
-import { Router, Routes, Route } from 'react-router-dom';
-import { SingleForm } from './components/UserForm.js';
-import {UserForm, HtmlForm} from './components/FormValidations/UserForm.js';
+// import WelcomeNew from './components/Welcome.js';
+// import MainLayout from './components/MainLayout.js';
+// import { Router, Routes, Route } from 'react-router-dom';
+// import { SingleForm } from './components/UserForm.js';
+// import {UserForm, HtmlForm} from './components/FormValidations/UserForm.js';
 // import ThemeProvider from './components/ThemeProvider.js';
 // import ThemedComponent from './components/ThemedComponent.js';
 // import UserComponent from './components/UserComponent.js';
@@ -20,6 +20,8 @@ import {UserForm, HtmlForm} from './components/FormValidations/UserForm.js';
 // import StyleTaggedComponent from './components/StyleComponents/StyleTaggedComponent.js';
 // import InputFocusWithButton from './components/UseRef/InputFocusWithButton.js';
 // import RefCounter from './components/UseRef/RefCounter.js';
+// import ReactHookForm from './components/FormValidations/ReactHookForm.js';
+import {GetRequest, AxiosGetRequest} from './components/API/GetRequest.js';
 
 function App() {
   const products = [
@@ -38,7 +40,10 @@ function App() {
     {/* <InputFocusWithButton /> */}
     {/* <RefCounter /> */}
     {/* <UserForm /> */}
-    <HtmlForm />
+    {/* <HtmlForm /> */}
+    {/* <ReactHookForm /> */}
+    <GetRequest />
+    {/* <AxiosGetRequest /> */}
     </>
     
     // <ThemeProvider>
