@@ -21,7 +21,8 @@ import './App.css';
 // import InputFocusWithButton from './components/UseRef/InputFocusWithButton.js';
 // import RefCounter from './components/UseRef/RefCounter.js';
 // import ReactHookForm from './components/FormValidations/ReactHookForm.js';
-import {GetRequest, AxiosGetRequest} from './components/API/GetRequest.js';
+// import {GetRequest, AxiosGetRequest} from './components/API/GetRequest.js';
+import {PostPutPatchDel, PostPutPatchDelAxios} from './components/API/PostPutPatchDel.js';
 
 function App() {
   const products = [
@@ -42,8 +43,10 @@ function App() {
     {/* <UserForm /> */}
     {/* <HtmlForm /> */}
     {/* <ReactHookForm /> */}
-    <GetRequest />
+    {/* <GetRequest /> */}
     {/* <AxiosGetRequest /> */}
+    {/* <PostPutPatchDel /> */}
+    <PostPutPatchDelAxios />
     </>
     
     // <ThemeProvider>

@@ -11,7 +11,7 @@ function GetRequest() {
         const fetchPosts = async() => {
             try {
                 const id = searchTerm ? searchTerm : 1; // Default to 1 if no search term
-                const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+                const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
                 if(!response.ok) {
                     throw new Error('Network response was not ok');
                 }
