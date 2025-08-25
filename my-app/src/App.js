@@ -22,7 +22,8 @@ import './App.css';
 // import RefCounter from './components/UseRef/RefCounter.js';
 // import ReactHookForm from './components/FormValidations/ReactHookForm.js';
 // import {GetRequest, AxiosGetRequest} from './components/API/GetRequest.js';
-import {PostPutPatchDel, PostPutPatchDelAxios} from './components/API/PostPutPatchDel.js';
+// import {PostPutPatchDel, PostPutPatchDelAxios} from './components/API/PostPutPatchDel.js';
+import {LoginButton, LoginWithProps} from './components/LoginTest/LoginButton.js';
 
 function App() {
   const products = [
@@ -46,7 +47,9 @@ function App() {
     {/* <GetRequest /> */}
     {/* <AxiosGetRequest /> */}
     {/* <PostPutPatchDel /> */}
-    <PostPutPatchDelAxios />
+    {/* <PostPutPatchDelAxios /> */}
+    {/* <LoginButton /> */}
+    <LoginWithProps isLoggedIn={true} />
     </>
     
     // <ThemeProvider>
