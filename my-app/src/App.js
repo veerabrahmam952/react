@@ -1,5 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
+// import UseMemo from './components/Memoization/UseMemo';
 // import Welcome from './welcome.jsx';
 // import Student from './Student.js';
 // import Counter from './Counter.js';
@@ -23,7 +24,8 @@ import './App.css';
 // import ReactHookForm from './components/FormValidations/ReactHookForm.js';
 // import {GetRequest, AxiosGetRequest} from './components/API/GetRequest.js';
 // import {PostPutPatchDel, PostPutPatchDelAxios} from './components/API/PostPutPatchDel.js';
-import {LoginButton, LoginWithProps} from './components/LoginTest/LoginButton.js';
+// import {LoginButton, LoginWithProps} from './components/LoginTest/LoginButton.js';
+import UseCallBackParent from './components/Memoization/UseCallBackParent.js';
 
 function App() {
   const products = [
@@ -49,7 +51,9 @@ function App() {
     {/* <PostPutPatchDel /> */}
     {/* <PostPutPatchDelAxios /> */}
     {/* <LoginButton /> */}
-    <LoginWithProps isLoggedIn={true} />
+    {/* <LoginWithProps isLoggedIn={true} /> */}
+    {/* <UseMemo number={7}/> */}
+    <UseCallBackParent />
     </>
     
     // <ThemeProvider>
