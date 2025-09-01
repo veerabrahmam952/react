@@ -10,7 +10,7 @@ export const products = [
             "5G connectivity"
         ],
         price: 999,
-        stockCount: 4
+        stockCount: 6
     },
     {
         id: 2,
