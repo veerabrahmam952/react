@@ -22,7 +22,7 @@ function Header() {
         <header style={headerStyle}>
             <h1>My Product Store</h1>
             <div style={linkStyle}>
-                <Link to="/cart">Cart</Link>
+                <Link style={{'color': 'white'}} to="/cart">Cart</Link>
             </div>
              
         </header>

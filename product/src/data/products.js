@@ -10,7 +10,8 @@ export const products = [
             "5G connectivity"
         ],
         price: 999,
-        stockCount: 6
+        stockCount: 6,
+        count: 0
     },
     {
         id: 2,
@@ -22,7 +23,8 @@ export const products = [
             "upto 6 hours of listening time",
         ],
         price: 249,
-        stockCount: 5
+        stockCount: 5,
+        count: 0
     },
     {
         id: 3,
@@ -34,6 +36,7 @@ export const products = [
             "upto 18 hours of battery life",
         ],
         price: 399,
-        stockCount: 7
+        stockCount: 7,
+        count: 0
     }
 ]

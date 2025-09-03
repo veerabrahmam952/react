@@ -10,11 +10,11 @@ function ProductCard({
     const [showMore, setShowMore] = useState(false);
 
     const handlePurchaseSingleItem = () => {
-      onPurchase(product.id, product.stockCount -1);
+      onPurchase(product.id, product.stockCount -1, 1);
     };
 
     const handlePurchaseTwoItems = () => {
-       onPurchase(product.id, product.stockCount -2);
+       onPurchase(product.id, product.stockCount -2, 2);
     };
 
     const handleFavoriteClick = () => {

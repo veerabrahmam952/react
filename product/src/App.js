@@ -1,5 +1,5 @@
 import './App.css';
-import React from 'react';
+import React, { useState } from 'react';
 import { Fragment } from 'react';
 import ProductList from './components/ProductList.js';
 import ProductCard from './components/ProductCard.js';
@@ -11,14 +11,22 @@ import DashBoard from './components/DashBoard.js';
 import Cart from './components/Cart.js';
 
 function App() {
-  
+  const [cart, setCart] = useState([]);
+
+  const handleAddToCart = (product)=> {
+     setCart((prevCart)=> 
+      prevCart.some((item)=> item.id === product.id) 
+        ? prevCart 
+        : [...prevCart, product]);
+    console.log(cart);
+  };
   
   return (
     <div className="App">
       <Header />
       <Routes>
-        <Route index element={<DashBoard /> } />
-        <Route path='/cart' element={<Cart />} />
+        <Route index element={<DashBoard onAddToCart={handleAddToCart} /> } />
+        <Route path='/cart' element={<Cart items={cart}/>} />
       </Routes>
     </div>
   );
