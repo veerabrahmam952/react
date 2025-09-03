@@ -1,0 +1,12 @@
+Deployment:
+
+Free Cloud deployment: Netlify, Vercel, Heroku etc
+
+Paid Cloud Deployment: GCP, AWS, Azure
+
+Mannual Deployment:
+Netlify:
+Step -1: Build Application in local using command "npm run build"
+Step-2: Open Netlify account choose Mannual deployment option and upload build folder
+
+CICD: Continuous Integration Continuous Deployment
