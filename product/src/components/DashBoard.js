@@ -37,6 +37,7 @@ function DashBoard({onAddToCart}) {
       setFavorites((prevFavorites)=> [...prevFavorites, productId]);
       const product = products.find((product)=> product.id === productId);
       setWishlist((prevWishlist)=> [...prevWishlist, product]);
+      console.log(whishlist);
     }
   }
 
