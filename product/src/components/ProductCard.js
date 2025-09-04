@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from './ProductCard.module.css';
+import getAiSummary from './OpenAPI';
 
 function ProductCard({
     product,
@@ -19,6 +20,11 @@ function ProductCard({
 
     const handleFavoriteClick = () => {
         onFavorite(product.id)
+    }
+
+    const handleGenAISummary= async() => {
+      const res = await getAiSummary();
+      console.log(res);
     }
 
     return(
@@ -44,6 +50,8 @@ function ProductCard({
                 ))}
             </ul>
        )}
+
+       <button onClick={handleGenAISummary}>Get Summary</button>
         
         <StockStatus stockCount={product.stockCount} />
         <>
