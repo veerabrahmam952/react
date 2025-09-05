@@ -1,18 +1,21 @@
-import OpenAI from 'openai';
+import {GoogleGenerativeAI} from '@google/generative-ai';
 
-const openai = new OpenAI({
-    apiKey: '',
-    dangerouslyAllowBrowser: true
-})
+const Gemini_API_KEY = '';
+const geminiGenAI = new GoogleGenerativeAI(Gemini_API_KEY);
 
-const getAiSummary = async()=> {
-    const prompt = 'generate summary of Iphone product Iphone 15 pro';
-    const completion = await openai.chat.completions.create({
-        model: 'gpt-3.5-turbo',
-        messages: [{role: 'user', content: prompt}]
-    });
+const model = geminiGenAI.getGenerativeModel({model: "gemini-2.0-flash"})
 
-    return completion.choices[0].message.content;
+const getGeminiAISummary = async(productName)=> {
+   const prompt = `Provide a concise, helpful, and enaging summary of the ${productName} iphone. Mention key features and who it is best for`;
+   try {
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    const text = response.text();
+    return text;
+   } catch(error) {
+    console.error('Error', error);
+    return "Something Went Wrong";
+   }
 }
 
-export default getAiSummary;
+export default getGeminiAISummary;

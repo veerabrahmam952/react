@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from './ProductCard.module.css';
-import getAiSummary from './OpenAPI';
+import getGeminiAISummary from './OpenAPI';
 
 function ProductCard({
     product,
@@ -9,6 +9,8 @@ function ProductCard({
     onFavorite
 }) {
     const [showMore, setShowMore] = useState(false);
+    const [summary, setSummary] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
 
     const handlePurchaseSingleItem = () => {
       onPurchase(product.id, product.stockCount -1, 1);
@@ -23,8 +25,10 @@ function ProductCard({
     }
 
     const handleGenAISummary= async() => {
-      const res = await getAiSummary();
-      console.log(res);
+      setIsLoading(true);
+      const res = await getGeminiAISummary(product.title);
+      setSummary(res);
+      setIsLoading(false);
     }
 
     return(
@@ -51,8 +55,13 @@ function ProductCard({
             </ul>
        )}
 
-       <button onClick={handleGenAISummary}>Get Summary</button>
-        
+       <button onClick={handleGenAISummary} disabled={isLoading}>{isLoading ? 'Generating...': 'Get GenAI Summary'}</button>
+        {summary && (
+            <div>
+                <h4>Ai Response</h4>
+                <p>{summary}</p>
+            </div>
+        )}
         <StockStatus stockCount={product.stockCount} />
         <>
          <p>Price: {product.price}</p>
