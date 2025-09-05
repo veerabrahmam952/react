@@ -1,6 +1,6 @@
 import {GoogleGenerativeAI} from '@google/generative-ai';
 
-const Gemini_API_KEY = '';
+const Gemini_API_KEY = process.env.REACT_APP_GeminiAPIKey;
 const geminiGenAI = new GoogleGenerativeAI(Gemini_API_KEY);
 
 const model = geminiGenAI.getGenerativeModel({model: "gemini-2.0-flash"})
