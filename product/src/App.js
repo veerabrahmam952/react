@@ -8,6 +8,7 @@ import Header from './components/Header.js';
 import { Route, Routes } from 'react-router-dom';
 import DashBoard from './components/DashBoard.js';
 import Cart from './components/Cart.js';
+import Payment from './components/Payment.js';
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -20,12 +21,16 @@ function App() {
     console.log(cart);
   };
   
+  // Calculate total price for passing to payment page
+  const totalPrice = cart.reduce((acc, item) => acc + item.price * item.count, 0);
+
   return (
     <div className="App">
       <Header />
       <Routes>
         <Route index element={<DashBoard onAddToCart={handleAddToCart} /> } />
         <Route path='/cart' element={<Cart items={cart}/>} />
+        <Route path='/payment' element={<Payment total={totalPrice} />} />
       </Routes>
     </div>
   );
