@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Student from './Components/Student';
+import Counter from './Components/Counter';
 
 function App() {
   const studentData = {
@@ -10,7 +11,8 @@ function App() {
   };
   return (
     <>
-    <Student studentData={studentData} />
+    {/* <Student studentData={studentData} /> */}
+    <Counter />
     </>
   );
 }
