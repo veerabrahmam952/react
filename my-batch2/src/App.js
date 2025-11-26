@@ -4,6 +4,7 @@ import Student from './Components/Student';
 import Counter from './Components/Counter';
 import {ConditionalRendering, TerniaryCondition, AndOperator} from './Components/Conditional';
 import {ListRendering, TodoList} from './Components/ListRendering';
+import Form from './Components/Forms';
 
 function App() {
   const studentData = {
@@ -22,7 +23,8 @@ function App() {
     {/* <AndOperator isLoggedIn={'ADMIN'}/>
     <AndOperator isLoggedIn={''}/> */}
     {/* <ListRendering /> */}
-    <TodoList />
+    {/* <TodoList /> */}
+    <Form />
     </>
   );
 }
