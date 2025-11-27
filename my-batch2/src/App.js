@@ -5,6 +5,7 @@ import Counter from './Components/Counter';
 import {ConditionalRendering, TerniaryCondition, AndOperator} from './Components/Conditional';
 import {ListRendering, TodoList} from './Components/ListRendering';
 import Form from './Components/Forms';
+import {UseEffect, PostFetcher, UseEffectTimeInterval} from './Components/UseEffect';
 
 function App() {
   const studentData = {
@@ -24,7 +25,10 @@ function App() {
     <AndOperator isLoggedIn={''}/> */}
     {/* <ListRendering /> */}
     {/* <TodoList /> */}
-    <Form />
+    {/* <Form /> */}
+    {/* <UseEffect /> */}
+    <PostFetcher />
+    <UseEffectTimeInterval />
     </>
   );
 }
