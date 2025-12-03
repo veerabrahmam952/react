@@ -12,6 +12,10 @@ import Layout from './Components/Route/Layout';
 import Record from './Components/Route/Record';
 import UseNavigate from './Components/Route/UseNavigate';
 import ThemeProvider from './Components/Context/ThemeProvider';
+import InlineStyle from './Components/Styles/InlineStyle';
+import StyleSheet from './Components/Styles/StyleSheet';
+import ModuleStyle from './Components/Styles/ModuleStyle';
+import StyledComponent from './Components/Styles/StyledComponent';
 
 function App() {
   const studentData = {
@@ -47,7 +51,14 @@ function App() {
         <Route path='/usenavigate' Component={UseNavigate}></Route>
       </Route>
     </Routes> */}
-    <ThemeProvider />
+    {/* <ThemeProvider /> */}
+    {/* <InlineStyle /> */}
+    {/* <StyleSheet />
+    <div className='container_app'>
+       Hello
+    </div> */}
+    {/* <ModuleStyle /> */}
+    <StyledComponent />
     </>
   );
 }
