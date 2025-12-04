@@ -16,6 +16,8 @@ import InlineStyle from './Components/Styles/InlineStyle';
 import StyleSheet from './Components/Styles/StyleSheet';
 import ModuleStyle from './Components/Styles/ModuleStyle';
 import StyledComponent from './Components/Styles/StyledComponent';
+import FocusUser from './Components/UseRef/FocusUseref';
+import TimeIntervalUseRef from './Components/UseRef/TimeIntervalUseRef';
 
 function App() {
   const studentData = {
@@ -58,7 +60,9 @@ function App() {
        Hello
     </div> */}
     {/* <ModuleStyle /> */}
-    <StyledComponent />
+    {/* <StyledComponent /> */}
+    {/* <FocusUser /> */}
+    <TimeIntervalUseRef />
     </>
   );
 }
