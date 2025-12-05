@@ -18,6 +18,8 @@ import ModuleStyle from './Components/Styles/ModuleStyle';
 import StyledComponent from './Components/Styles/StyledComponent';
 import FocusUser from './Components/UseRef/FocusUseref';
 import TimeIntervalUseRef from './Components/UseRef/TimeIntervalUseRef';
+import {GetRequestByFetch, GetRequestByAxios} from './Components/API/GetRequest';
+import PostRequestByFetch from './Components/API/PostPutDel';
 
 function App() {
   const studentData = {
@@ -62,7 +64,9 @@ function App() {
     {/* <ModuleStyle /> */}
     {/* <StyledComponent /> */}
     {/* <FocusUser /> */}
-    <TimeIntervalUseRef />
+    {/* <TimeIntervalUseRef /> */}
+    {/* <GetRequestByAxios /> */}
+    <PostRequestByFetch />
     </>
   );
 }
