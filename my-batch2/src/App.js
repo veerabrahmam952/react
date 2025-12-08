@@ -19,7 +19,8 @@ import StyledComponent from './Components/Styles/StyledComponent';
 import FocusUser from './Components/UseRef/FocusUseref';
 import TimeIntervalUseRef from './Components/UseRef/TimeIntervalUseRef';
 import {GetRequestByFetch, GetRequestByAxios} from './Components/API/GetRequest';
-import PostRequestByFetch from './Components/API/PostPutDel';
+import {PostRequestByFetch, PostRequestByAxios, 
+  PutrequestByFetch, PatchRequestByFetch, DeleteRequestByFetch, PutrequestByAxios} from './Components/API/PostPutDel';
 
 function App() {
   const studentData = {
@@ -66,7 +67,12 @@ function App() {
     {/* <FocusUser /> */}
     {/* <TimeIntervalUseRef /> */}
     {/* <GetRequestByAxios /> */}
-    <PostRequestByFetch />
+    {/* <PostRequestByFetch /> */}
+    <PostRequestByAxios />
+    {/* <PutrequestByFetch /> */}
+    {/* <PatchRequestByFetch /> */}
+    {/* <DeleteRequestByFetch /> */}
+    {/* <PutrequestByAxios /> */}
     </>
   );
 }
