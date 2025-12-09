@@ -21,6 +21,8 @@ import TimeIntervalUseRef from './Components/UseRef/TimeIntervalUseRef';
 import {GetRequestByFetch, GetRequestByAxios} from './Components/API/GetRequest';
 import {PostRequestByFetch, PostRequestByAxios, 
   PutrequestByFetch, PatchRequestByFetch, DeleteRequestByFetch, PutrequestByAxios} from './Components/API/PostPutDel';
+import UseMemo from './Components/Memoization/UseMemo';
+import UseCallBack from './Components/Memoization/UseCallback';
 
 function App() {
   const studentData = {
@@ -68,11 +70,13 @@ function App() {
     {/* <TimeIntervalUseRef /> */}
     {/* <GetRequestByAxios /> */}
     {/* <PostRequestByFetch /> */}
-    <PostRequestByAxios />
+    {/* <PostRequestByAxios /> */}
     {/* <PutrequestByFetch /> */}
     {/* <PatchRequestByFetch /> */}
     {/* <DeleteRequestByFetch /> */}
     {/* <PutrequestByAxios /> */}
+    {/* <UseMemo /> */}
+    <UseCallBack />
     </>
   );
 }
