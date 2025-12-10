@@ -26,9 +26,12 @@ function PostFetcher() {
            const fetchPosts = async () => {
                 const response = await fetch(`https://jsonplaceholder.typicode.com/posts/${query}`);
                 const data = await response.json();
-                setPosts([data]);
-                console.log("Posts fetched:", posts);
-                setLoading(false);
+                setTimeout(()=> {
+                  setPosts([data]);
+                    console.log("Posts fetched:", posts);
+                    setLoading(false);
+                }, 3000)
+                
             }
             fetchPosts();
         }

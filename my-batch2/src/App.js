@@ -6,7 +6,7 @@ import {ConditionalRendering, TerniaryCondition, AndOperator} from './Components
 import {ListRendering, TodoList} from './Components/ListRendering';
 import Form from './Components/Forms';
 import {UseEffect, PostFetcher, UseEffectTimeInterval} from './Components/UseEffect';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Router } from 'react-router-dom';
 import RouteWelcome from './Components/RouteWelcome';
 import Layout from './Components/Route/Layout';
 import Record from './Components/Route/Record';
@@ -23,6 +23,18 @@ import {PostRequestByFetch, PostRequestByAxios,
   PutrequestByFetch, PatchRequestByFetch, DeleteRequestByFetch, PutrequestByAxios} from './Components/API/PostPutDel';
 import UseMemo from './Components/Memoization/UseMemo';
 import UseCallBack from './Components/Memoization/UseCallback';
+import { lazy, Suspense } from 'react';
+import { Link, useLocation  } from "react-router-dom";
+
+
+function delayForDemo(promise) {
+  return new Promise(resolve => { setTimeout(resolve, 2000)}).then(() => promise); 
+}
+
+const Home = lazy(()=> 
+  delayForDemo(import('./Components/LazyLoad/Home')));
+const DashBoard = lazy(()=> import('./Components/LazyLoad/DashBoard'));
+const About = lazy(()=> import('./Components/LazyLoad/About'));
 
 function App() {
   const studentData = {
@@ -30,6 +42,7 @@ function App() {
     age: "28",
     score: 85
   };
+  let location = useLocation();
   return (
     <>
     {/* <Student studentData={studentData} /> */}
@@ -76,7 +89,18 @@ function App() {
     {/* <DeleteRequestByFetch /> */}
     {/* <PutrequestByAxios /> */}
     {/* <UseMemo /> */}
-    <UseCallBack />
+    {/* <UseCallBack /> */}
+    <Link to='/home'>Move to Home Page</Link><br />
+    <Link to='/about'>Move to about Page</Link><br />
+    <Link to='/dashboard'>Move to dashboard Page</Link><br />
+    
+    <Suspense fallback={<><h1>Loading components...</h1>Test..</>} key={location.key}>
+      <Routes>
+        <Route path='/home' element={<PostFetcher />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/dashboard' element={<DashBoard />} />
+      </Routes>
+    </Suspense>
     </>
   );
 }
