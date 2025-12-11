@@ -4,7 +4,7 @@ import Student from './Components/Student';
 import Counter from './Components/Counter';
 import {ConditionalRendering, TerniaryCondition, AndOperator} from './Components/Conditional';
 import {ListRendering, TodoList} from './Components/ListRendering';
-import Form from './Components/Forms';
+import {Form, HtmlForm} from './Components/Validations/Forms';
 import {UseEffect, PostFetcher, UseEffectTimeInterval} from './Components/UseEffect';
 import { Routes, Route, Router } from 'react-router-dom';
 import RouteWelcome from './Components/RouteWelcome';
@@ -25,6 +25,7 @@ import UseMemo from './Components/Memoization/UseMemo';
 import UseCallBack from './Components/Memoization/UseCallback';
 import { lazy, Suspense } from 'react';
 import { Link, useLocation  } from "react-router-dom";
+import ReactHookForm from './Components/Validations/ReactHookForm';
 
 
 function delayForDemo(promise) {
@@ -90,7 +91,7 @@ function App() {
     {/* <PutrequestByAxios /> */}
     {/* <UseMemo /> */}
     {/* <UseCallBack /> */}
-    <Link to='/home'>Move to Home Page</Link><br />
+    {/* <Link to='/home'>Move to Home Page</Link><br />
     <Link to='/about'>Move to about Page</Link><br />
     <Link to='/dashboard'>Move to dashboard Page</Link><br />
     
@@ -100,7 +101,9 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/dashboard' element={<DashBoard />} />
       </Routes>
-    </Suspense>
+    </Suspense> */}
+    {/* <HtmlForm /> */}
+    <ReactHookForm />
     </>
   );
 }

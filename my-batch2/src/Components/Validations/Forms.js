@@ -121,4 +121,35 @@ function Form() {
     )
 }
 
-export default Form;
+function HtmlForm() {
+    
+    return(
+        <form>
+            <input 
+               type="text"
+               name="name"
+               placeholder="Enter your name"
+               required="true"
+               maxLength={20}
+               minLength={10}
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+             required="true"
+            />
+            <input
+              type="number"
+              name="number"
+              placeholder="Enter your number"
+              required="true"
+              min={10}
+              max={100}
+            />
+             <button type="submit">Submit</button>
+        </form>
+    )
+}
+
+export {Form, HtmlForm};
