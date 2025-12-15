@@ -5,7 +5,7 @@ import {products as productData} from '../data/products.js';
 import ProductFilter from "./ProductFilter.js";
 
 function DashBoard({onAddToCart}) {
-    const [products, setProducts] = React.useState(productData);
+  const [products, setProducts] = React.useState(productData);
   const [favorites, setFavorites] = React.useState([]);
   const [whishlist, setWishlist] = React.useState([]);
   const [filters, setFilters] = React.useState({
