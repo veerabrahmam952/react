@@ -50,7 +50,7 @@ export const products = [
             "upto 18 hours of battery life",
         ],
         price: 599,
-        stockCount: 7,
+        stockCount: 3,
         count: 0
     },
 
