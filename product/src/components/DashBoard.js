@@ -80,8 +80,9 @@ function DashBoard({onAddToCart}) {
             isFavorite={favorites.includes(product.id)}
             onFavorite={handleOnFavorite}
           />
-      ) )}
+      ))}
       </ProductList>
+      
       {/* {products.filter(
         ({price})=> price >= filters.price.min && price <= filters.price.max
       ).map((product)=> (
