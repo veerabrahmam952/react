@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import styles from './ProductCard.module.css';
-// import getGeminiAISummary from './OpenAPI';
+import getGeminiAISummary from './OpenAPI';
 
 function ProductCard({product, onPurchase,isFavorite, onFavorite}) {
     const [showMore, setShowMore] = useState(false);
@@ -21,7 +21,7 @@ function ProductCard({product, onPurchase,isFavorite, onFavorite}) {
 
     const handleGenAISummary= async() => {
       setIsLoading(true);
-      const res = ''; // await getGeminiAISummary(product.title);
+      const res = await getGeminiAISummary(product.title);
       setSummary(res);
       setIsLoading(false);
     }
