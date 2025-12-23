@@ -27,6 +27,7 @@ import { lazy, Suspense } from 'react';
 import { Link, useLocation  } from "react-router-dom";
 import ReactHookForm from './Components/Validations/ReactHookForm';
 import {LoginButton, LoginWithProps} from './Components/TestCases/LoginButton';
+import CounterView from './Components/ReduxState/ReduxCounter';
 
 
 function delayForDemo(promise) {
@@ -48,7 +49,7 @@ function App() {
   return (
     <>
     {/* <Student studentData={studentData} /> */}
-    {/* <Counter /> */}
+    <Counter />
     {/* <ConditionalRendering isLoggedIn={'ADMIN'}/>
     <ConditionalRendering isLoggedIn={''}/> */}
     {/* <TerniaryCondition isLoggedIn={'ADMIN'}/>
@@ -106,7 +107,8 @@ function App() {
     {/* <HtmlForm /> */}
     {/* <ReactHookForm /> */}
     {/* <LoginButton /> */}
-    <LoginWithProps isLoggedIn={false}/>
+    {/* <LoginWithProps isLoggedIn={false}/> */}
+    <CounterView />
     </>
   );
 }
